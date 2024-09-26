@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT-AP University Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #2c86d6; /* Matching the header blue color */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        /* Sidebar styling matching the image */
+        .sidebar {
+            background-color: #333; /* Dark background for sidebar */
+            width: 50px; /* Reduced width to fit all icons */
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            padding-top: 60px; /* Space for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            overflow-y: auto; /* Allow scrolling if needed */
+        }
+
+        .sidebar a {
+            display: block;
+            text-align: center;
+            padding: 10px; /* Reduced padding */
+            margin: 5px 0; /* Reduced margin to fit more icons */
+            color: white;
+            font-size: 18px; /* Reduced icon size */
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Icon colors */
+        .sidebar a .icon {
+            color: white;
+            font-size: 16px; /* Adjusted icon size to be smaller */
+        }
+
+        /* Main content area */
+        .main-content {
+            margin-left: 80px; /* Adjust for sidebar */
+            padding: 80px 20px 20px 20px; /* Adjust padding for fixed header */
+            width: 100%;
+        }
+
+        /* Main container for the profile section */
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Profile section styling */
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            border-radius: 10px; /* Slightly rounded square */
+            height: 120px;
+            width: 100px;
+            margin-right: 20px;
+            border: 2px solid #d0d0d0; /* Adding border around the profile picture */
+        }
+
+        .info {
+            line-height: 1.6;
+            background-color: #f0f5f5; /* Background similar to the original */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .info div {
+            margin-bottom: 5px;
+        }
+
+        .info div strong {
+            color: #2c86d6; /* Blue color matching the header */
+        }
+
+        /* Section collapsible styling */
+        .section {
+            margin-bottom: 10px;
+        }
+
+        .section-header {
+            background-color: #2c86d6;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .section-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #d0d0d0;
+            border-top: none;
+            border-radius: 5px;
+        }
+
+        /* Hostel information styling */
+        .hostel-info {
+            color: red;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <img src="https://vtop.vitap.ac.in/vtop/assets/img/VIT_AP_logo.png" alt="VIT-AP University">
+        <div>VIT-AP University</div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <a href="#" title="Profile"><i class="fas fa-user icon"></i></a>
+        <a href="#" title="Email"><i class="fas fa-envelope icon"></i></a>
+        <a href="#" title="File Alt"><i class="fas fa-file-alt icon"></i></a>
+        <a href="#" title="Clipboard List"><i class="fas fa-clipboard-list icon"></i></a>
+        <a href="#" title="Book"><i class="fas fa-book icon"></i></a>
+        <a href="#" title="Graduation Cap"><i class="fas fa-graduation-cap icon"></i></a>
+        <a href="#" title="University"><i class="fas fa-university icon"></i></a>
+        <a href="#" title="Book Open"><i class="fas fa-book-open icon"></i></a>
+        <a href="#" title="Landmark"><i class="fas fa-landmark icon"></i></a>
+        <a href="#" title="Plane"><i class="fas fa-plane icon"></i></a>
+        <a href="#" title="Settings"><i class="fas fa-cog icon"></i></a>
+        <a href="#" title="Camera"><i class="fas fa-camera icon"></i></a>
+        <a href="#" title="Home"><i class="fas fa-home icon"></i></a>
+        <a href="#" title="Target"><i class="fas fa-bullseye icon"></i></a>
+        <a href="#" title="Second File Alt"><i class="fas fa-file-alt icon"></i></a>
+        <a href="#" title="Shield"><i class="fas fa-shield-alt icon"></i></a>
+        <a href="#" title="Trophy"><i class="fas fa-trophy icon"></i></a>
+        <a href="#" title="Lock"><i class="fas fa-lock icon"></i></a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+
+        <!-- Main Container -->
+        <div class="container">
+            <div class="profile">
+                <!-- Profile Picture -->
+                <img src="https://i.postimg.cc/Hx7LTsrj/Whats-App-Image-2024-09-25-at-23-36-10-ea3f4124.jpg" alt="Profile Picture">
+                <!-- Profile Details -->
+                <div class="info">
+                    <div><strong>Name:</strong> Kotla Prem Kumar</div>
+                    <div><strong>Register Number:</strong> 22BCE9665</div>
+                    <div><strong>Program & Branch:</strong> BTech - Computer Science and Engineering Core Only</div>
+                    <div><strong>VIT Email:</strong> prem.22bce9665@vitapstudent.ac.in</div>
+                    <div><strong>School Name:</strong> School of Computer Science & Engineering</div>
+                </div>
+            </div>
+
+            <!-- Collapsible Sections -->
+     	    <div class="section">
+    <div class="section-header" onclick="toggleSection('personal-info')">Personal Information</div>
+    <div id="personal-info" class="section-content">
+        <div><strong>Birth Date:</strong> January 1, 2000</div>
+        <div><strong>Nationality:</strong> Indian</div>
+        <div><strong>Address:</strong> 123 Main St, City, State, Zip Code</div>
+        <div><strong>Phone Number:</strong> +91 12345 67890</div>
+        <div><strong>Emergency Contact:</strong> John Doe, +91 98765 43210</div>
+        <div><strong>Languages Known:</strong> English, Hindi, Telugu</div>
+    </div>
+</div>
+
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection('education-info')">Educational Information</div>
+                <div id="education-info" class="section-content">
+                    Educational details go here...
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection('family-info')">Family Information</div>
+                <div id="family-info" class="section-content">
+                    Family details go here...
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection('proctor-info')">Proctor Information</div>
+                <div id="proctor-info" class="section-content">
+                    Proctor details go here...
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection('hostel-info')">Hostel Information</div>
+                <div id="hostel-info" class="section-content hostel-info">
+                    SORRY, HOSTEL INFORMATION NOT FOUND.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for collapsible sections -->
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            if (section.style.display === "block") {
+                section.style.display = "none";
+            } else {
+                section.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
